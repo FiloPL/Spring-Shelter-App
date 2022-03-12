@@ -1,10 +1,9 @@
 package com.filopl.springshelterapp.controllers;
 
-import com.filopl.springshelterapp.services.GreetingsServiceImpl;
+import com.filopl.springshelterapp.profiler.controllers.PropertyInjectedController;
+import com.filopl.springshelterapp.profiler.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
 
@@ -13,7 +12,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectedController();
-        controller.greetingsService = new GreetingsServiceImpl();
+        controller.greetingsService = new ConstructorGreetingService();
     }
 
     @Test

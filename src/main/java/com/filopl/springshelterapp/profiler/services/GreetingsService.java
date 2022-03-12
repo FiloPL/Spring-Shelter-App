@@ -1,4 +1,4 @@
-package com.filopl.springshelterapp.services;
+package com.filopl.springshelterapp.profiler.services;
 
 public interface GreetingsService {
 
