@@ -7,6 +7,12 @@ public class Pet {
     private Owner owner;
     private LocalDate brithDate;
 
+    public Pet(PetType petType, Owner owner, LocalDate brithDate) {
+        this.petType = petType;
+        this.owner = owner;
+        this.brithDate = brithDate;
+    }
+
     public PetType getPetType() {
         return petType;
     }
