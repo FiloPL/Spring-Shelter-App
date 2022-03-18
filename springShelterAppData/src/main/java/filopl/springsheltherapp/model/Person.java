@@ -4,6 +4,9 @@ public class Person extends BaseEntity{
     private String firsName;
     private String lastName;
 
+    public Person() {
+    }
+
     public Person(String firsName, String lastName) {
         this.firsName = firsName;
         this.lastName = lastName;
