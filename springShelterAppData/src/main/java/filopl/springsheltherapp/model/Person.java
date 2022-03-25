@@ -1,23 +1,23 @@
 package filopl.springsheltherapp.model;
 
 public class Person extends BaseEntity{
-    private String firsName;
+    private String firstName;
     private String lastName;
 
     public Person() {
     }
 
-    public Person(String firsName, String lastName) {
-        this.firsName = firsName;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
