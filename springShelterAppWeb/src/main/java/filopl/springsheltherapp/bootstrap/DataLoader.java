@@ -3,7 +3,7 @@ package filopl.springsheltherapp.bootstrap;
 import filopl.springsheltherapp.model.*;
 import filopl.springsheltherapp.services.OwnerService;
 import filopl.springsheltherapp.services.PetTypeService;
-import filopl.springsheltherapp.services.SpecialityService;
+import filopl.springsheltherapp.services.SpecialtyService;
 import filopl.springsheltherapp.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -16,13 +16,13 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
-    private final SpecialityService specialityService;
+    private final SpecialtyService specialtyService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
-        this.specialityService = specialityService;
+        this.specialtyService = specialtyService;
     }
 
     @Override
@@ -38,15 +38,15 @@ public class DataLoader implements CommandLineRunner {
     private void loadData() {
         Speciality radiology = new Speciality();
         radiology.setDescription("Radiology");
-        Speciality savedRadiology = specialityService.save(radiology);
+        Speciality savedRadiology = specialtyService.save(radiology);
 
         Speciality surgery = new Speciality();
         surgery.setDescription("Surgery");
-        Speciality savedSurgery = specialityService.save(surgery);
+        Speciality savedSurgery = specialtyService.save(surgery);
 
         Speciality denistry = new Speciality();
         denistry.setDescription("Denistry");
-        Speciality savedDenistry = specialityService.save(denistry);
+        Speciality savedDenistry = specialtyService.save(denistry);
 
 
         Owner owner1 = new Owner();

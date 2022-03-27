@@ -1,13 +1,13 @@
 package filopl.springsheltherapp.services.map;
 
 import filopl.springsheltherapp.model.Speciality;
-import filopl.springsheltherapp.services.SpecialityService;
+import filopl.springsheltherapp.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
+public class SpecialtyMapService extends AbstractMapService<Speciality, Long> implements SpecialtyService {
 
     @Override
     public Set<Speciality> findAll() {

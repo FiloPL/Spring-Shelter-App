@@ -2,7 +2,7 @@ package filopl.springsheltherapp.services.map;
 
 import filopl.springsheltherapp.model.Speciality;
 import filopl.springsheltherapp.model.Vet;
-import filopl.springsheltherapp.services.SpecialityService;
+import filopl.springsheltherapp.services.SpecialtyService;
 import filopl.springsheltherapp.services.VetService;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.Set;
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
-    private final SpecialityService specialityService;
+    private final SpecialtyService specialtyService;
 
-    public VetServiceMap(SpecialityService specialityService) {
-        this.specialityService = specialityService;
+    public VetServiceMap(SpecialtyService specialtyService) {
+        this.specialtyService = specialtyService;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
         if (object.getSpeciality().size() > 0){
             object.getSpeciality().forEach(speciality -> {
                 if(speciality.getId() == null){
-                    Speciality savedSpecialty = specialityService.save(speciality);
+                    Speciality savedSpecialty = specialtyService.save(speciality);
                     speciality.setId(savedSpecialty.getId());
                 }
             });
