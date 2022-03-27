@@ -4,11 +4,13 @@ import filopl.springsheltherapp.model.Pet;
 import filopl.springsheltherapp.model.PetType;
 import filopl.springsheltherapp.services.PetService;
 import filopl.springsheltherapp.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
     @Override

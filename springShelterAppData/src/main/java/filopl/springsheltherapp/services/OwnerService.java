@@ -2,10 +2,9 @@ package filopl.springsheltherapp.services;
 
 import filopl.springsheltherapp.model.Owner;
 
-import java.util.Set;
 
-public interface OwnerService extends CrudService<Owner, Long>{
+public interface OwnerService extends CrudService<Owner, Long> {
 
-    Owner findByLastName( String lastName);
+    Owner findByLastName(String lastName);
 
 }
