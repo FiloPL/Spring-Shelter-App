@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by jt on 8/5/18.
- */
 @Service
 @Profile("springdatajpa")
 public class PetSDJpaService implements PetService {
@@ -30,7 +27,7 @@ public class PetSDJpaService implements PetService {
     }
 
     @Override
-    public Pet findByID(Long aLong) {
+    public Pet findById(Long aLong) {
         return petRepository.findById(aLong).orElse(null);
     }
 
@@ -45,8 +42,7 @@ public class PetSDJpaService implements PetService {
     }
 
     @Override
-    public void deleteByID(Long aLong) {
+    public void deleteById(Long aLong) {
         petRepository.deleteById(aLong);
     }
-
 }

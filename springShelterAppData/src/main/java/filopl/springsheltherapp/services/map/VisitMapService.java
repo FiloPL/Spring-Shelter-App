@@ -2,10 +2,18 @@ package filopl.springsheltherapp.services.map;
 
 import filopl.springsheltherapp.model.Visit;
 import filopl.springsheltherapp.services.VisitService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class VistMapService extends AbstractMapService<Visit, Long> implements VisitService {
+/**
+ * Created by T.Filo Zegarlicki on 27.03.2022
+ **/
+
+@Service
+@Profile({"default", "map"})
+public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override
     public Set<Visit> findAll() {
@@ -13,13 +21,8 @@ public class VistMapService extends AbstractMapService<Visit, Long> implements V
     }
 
     @Override
-    public void deleteByID(Long id) {
-        super.deleteByID(id);
-    }
-
-    @Override
-    public Visit findByID(Long id) {
-        return super.findByID(id);
+    public Visit findById(Long id) {
+        return super.findById(id);
     }
 
     @Override
@@ -38,4 +41,8 @@ public class VistMapService extends AbstractMapService<Visit, Long> implements V
         super.delete(object);
     }
 
+    @Override
+    public void deleteById(Long id) {
+        super.deleteById(id);
+    }
 }

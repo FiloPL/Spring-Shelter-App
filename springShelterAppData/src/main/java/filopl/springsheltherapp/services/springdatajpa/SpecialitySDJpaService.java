@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by jt on 8/5/18.
- */
 @Service
 @Profile("springdatajpa")
 public class SpecialitySDJpaService implements SpecialtyService {
@@ -30,7 +27,7 @@ public class SpecialitySDJpaService implements SpecialtyService {
     }
 
     @Override
-    public Speciality findByID(Long aLong) {
+    public Speciality findById(Long aLong) {
         return specialtyRepository.findById(aLong).orElse(null);
     }
 
@@ -45,8 +42,7 @@ public class SpecialitySDJpaService implements SpecialtyService {
     }
 
     @Override
-    public void deleteByID(Long aLong) {
+    public void deleteById(Long aLong) {
         specialtyRepository.deleteById(aLong);
     }
-
 }

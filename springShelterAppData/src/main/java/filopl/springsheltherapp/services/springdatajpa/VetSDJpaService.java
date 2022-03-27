@@ -24,13 +24,12 @@ public class VetSDJpaService implements VetService {
     public Set<Vet> findAll() {
         Set<Vet> vets = new HashSet<>();
         vetRepository.findAll().forEach(vets::add);
-
         return vets;
     }
 
     @Override
-    public Vet findByID(Long id) {
-        return vetRepository.findById(id).orElse(null);
+    public Vet findById(Long aLong) {
+        return vetRepository.findById(aLong).orElse(null);
     }
 
     @Override
@@ -44,7 +43,7 @@ public class VetSDJpaService implements VetService {
     }
 
     @Override
-    public void deleteByID(Long id) {
-        vetRepository.deleteById(id);
+    public void deleteById(Long aLong) {
+        vetRepository.deleteById(aLong);
     }
 }

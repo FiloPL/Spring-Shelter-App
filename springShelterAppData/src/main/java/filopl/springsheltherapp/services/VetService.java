@@ -2,7 +2,9 @@ package filopl.springsheltherapp.services;
 
 import filopl.springsheltherapp.model.Vet;
 
-import java.util.Set;
+/**
+ * Created by T.Filo Zegarlicki on 27.03.2022
+ **/
 
 public interface VetService extends CrudService<Vet, Long>{
 

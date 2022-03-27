@@ -25,14 +25,15 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
     }
 
     @Override
-    public Vet findByID(Long id) {
-        return super.findByID(id);
+    public Vet findById(Long id) {
+        return super.findById(id);
     }
 
     @Override
     public Vet save(Vet object) {
-        if (object.getSpeciality().size() > 0){
-            object.getSpeciality().forEach(speciality -> {
+
+        if (object.getSpecialities().size() > 0){
+            object.getSpecialities().forEach(speciality -> {
                 if(speciality.getId() == null){
                     Speciality savedSpecialty = specialtyService.save(speciality);
                     speciality.setId(savedSpecialty.getId());
@@ -49,7 +50,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
     }
 
     @Override
-    public void deleteByID(Long id) {
-        super.deleteByID(id);
+    public void deleteById(Long id) {
+        super.deleteById(id);
     }
 }
